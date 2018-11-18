@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import styles from "./header.scss";
 
+import Navbar from "./Navbar";
+
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -29,6 +31,7 @@ class Header extends Component {
         <button className={styles.openMenuBtn} onClick={this.toggleNav}>
           O
         </button>
+        <Navbar hide={this.state.hideNav} toggleNav={this.toggleNav} />
       </header>
     );
   }

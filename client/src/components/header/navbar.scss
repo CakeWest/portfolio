@@ -1,0 +1,56 @@
+@import "../common/colours";
+
+nav {
+  position: fixed;
+  display: flex;
+  width: 70%;
+  height: 100%;
+  right: 0;
+  align-items: center;
+  background: $secondary-black;
+  color: white;
+
+  ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  li {
+    padding: 8px;
+    font-size: 1.2em;
+  }
+
+  li:hover {
+    background: lightgray;
+  }
+}
+
+nav.hide {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    position: static;
+    height: auto;
+    justify-content: flex-end;
+    background: transparent;
+
+    ul {
+      display: flex;
+      height: 100%;
+      width: auto;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  nav.hide {
+    display: flex;
+  }
+}
