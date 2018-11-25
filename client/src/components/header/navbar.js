@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import styles from "./navbar.scss";
 
@@ -8,10 +9,20 @@ function navbar(props) {
   return (
     <nav className={hide} onClick={props.toggleNav}>
       <ul>
-        <li>Home</li>
-        <li>Portfolio</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li>
+          <NavLink to="/" exact>
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/portfolio">Portfolio</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">About</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact">Contact</NavLink>
+        </li>
       </ul>
     </nav>
   );
