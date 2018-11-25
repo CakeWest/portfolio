@@ -22,13 +22,24 @@ nav {
     font-size: 1.2em;
   }
 
-  li:hover {
-    background: lightgray;
+  li {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center;
+  }
+
+  a {
+    color: #f0ffff;
   }
 }
 
 nav.hide {
   display: none;
+}
+
+[class*="active"] {
+  color: black;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -44,9 +55,8 @@ nav.hide {
       width: auto;
     }
 
-    li {
-      display: flex;
-      align-items: center;
+    a:hover {
+      border-bottom: 3px solid #222;
     }
   }
 
