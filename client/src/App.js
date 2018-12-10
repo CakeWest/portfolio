@@ -10,6 +10,13 @@ import Header from "components/header/Header.js";
 // import About from "components/about/About";
 // import Contact from "components/contact/Contact";
 
+// Icons
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faAngleLeft, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faWindowMinimize } from "@fortawesome/fontawesome-free-regular";
+library.add(faLinkedin, faGithub, faAngleLeft, faWindowMinimize, faEnvelope);
+
 class App extends Component {
   render() {
     return (
