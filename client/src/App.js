@@ -5,6 +5,7 @@ import "normalize.css";
 import "./app.css";
 
 import Header from "components/header/Header.js";
+import Footer from "components/footer/Footer.js";
 // import Home from "components/home/Home";
 // import Portfolio from "components/portfolio/Portfolio";
 // import About from "components/about/About";
@@ -27,6 +28,7 @@ class App extends Component {
           {/* <Route path="/portfolio" component={Portfolio} /> */}
           {/* <Route path="/about" component={About} /> */}
           {/* <Route path="/contact" component={Contact} /> */}
+          <Footer />
         </div>
       </BrowserRouter>
     );
