@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styles from "./header.scss";
 
@@ -29,7 +30,13 @@ class Header extends Component {
       <header>
         <h1 className={styles.title}>Jake West</h1>
         <button className={styles.openMenuBtn} onClick={this.toggleNav}>
-          O
+          <FontAwesomeIcon icon="angle-left" size="2x" />
+          <FontAwesomeIcon
+            icon={["far", "window-minimize"]}
+            rotation={90}
+            size="2x"
+            className="bar-icon"
+          />
         </button>
         <Navbar hide={this.state.hideNav} toggleNav={this.toggleNav} />
       </header>
