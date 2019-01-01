@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import "normalize.css";
-import "./app.css";
+import styles from "./app.scss";
 
 import Header from "header/Header.js";
 import Footer from "footer/Footer.js";
-// import Home from "home/Home";
+import Home from "home/Home";
 // import Portfolio from "portfolio/Portfolio";
 // import About from "about/About";
 // import Contact from "contact/Contact";
@@ -22,9 +22,9 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
+        <div className={styles.app}>
           <Header />
-          {/* <Route path="/" exact component={Home} /> */}
+          <Route path="/" exact component={Home} />
           {/* <Route path="/portfolio" component={Portfolio} /> */}
           {/* <Route path="/about" component={About} /> */}
           {/* <Route path="/contact" component={Contact} /> */}
