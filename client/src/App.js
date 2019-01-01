@@ -4,12 +4,12 @@ import { BrowserRouter, Route } from "react-router-dom";
 import "normalize.css";
 import "./app.css";
 
-import Header from "components/header/Header.js";
-import Footer from "components/footer/Footer.js";
-// import Home from "components/home/Home";
-// import Portfolio from "components/portfolio/Portfolio";
-// import About from "components/about/About";
-// import Contact from "components/contact/Contact";
+import Header from "header/Header.js";
+import Footer from "footer/Footer.js";
+// import Home from "home/Home";
+// import Portfolio from "portfolio/Portfolio";
+// import About from "about/About";
+// import Contact from "contact/Contact";
 
 // Icons
 import { library } from "@fortawesome/fontawesome-svg-core";

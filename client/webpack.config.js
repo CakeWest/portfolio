@@ -35,7 +35,10 @@ module.exports = {
   },
   resolve: {
     alias: {
-      components: path.resolve(__dirname, "src/components/")
+      common: path.resolve(__dirname, "src/components/common/"),
+      footer: path.resolve(__dirname, "src/components/footer/"),
+      header: path.resolve(__dirname, "src/components/header/"),
+      home: path.resolve(__dirname, "src/components/home/")
     }
   },
   output: {
