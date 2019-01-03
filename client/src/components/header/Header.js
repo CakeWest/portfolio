@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { withRouter } from "react-router-dom";
+import throttle from "common/throttle";
 
 import styles from "./header.scss";
 
@@ -9,13 +11,45 @@ class Header extends Component {
   constructor(props) {
     super(props);
 
+    // bind this
+    this.updateNameVisibility = this.updateNameVisibility.bind(this);
+    this.toggleNav = this.toggleNav.bind(this);
+
+    let updateNameVisibilitythrottled = throttle(
+      this.updateNameVisibility,
+      100
+    );
+
+    // hide name & add scroll event listener if home is initial page
+    let hideName = false;
+    if (window.location.pathname === "/") {
+      hideName = true;
+      window.addEventListener("scroll", updateNameVisibilitythrottled, false);
+    }
+
     this.state = {
-      hideNav: true
+      hideNav: true,
+      hideName
     };
 
-    this.toggleNav = this.toggleNav.bind(this);
+    // update hiding of name when page location changes
+    props.history.listen(location => {
+      let hideName = location.pathname === "/" ? true : false;
+      this.setState({ hideName });
+
+      if (location.pathname !== "/") {
+        window.removeEventListener(
+          "scroll",
+          updateNameVisibilitythrottled,
+          false
+        );
+      } else {
+        window.addEventListener("scroll", updateNameVisibilitythrottled, false);
+      }
+    });
   }
 
+  // toggle the mobile navbar
   toggleNav() {
     // make redundant past 768px
     if (window.innerWidth > 768) return;
@@ -25,10 +59,24 @@ class Header extends Component {
     });
   }
 
+  // update hideName based on vertical scroll
+  updateNameVisibility() {
+    console.log("header.updateVis");
+    console.log(window.scrollY);
+
+    if (window.scrollY < 230) {
+      this.setState({ hideName: true });
+    } else {
+      this.setState({ hideName: false });
+    }
+  }
+
   render() {
+    let hideClass = this.state.hideName ? styles.hide : "";
+
     return (
       <header>
-        <h1 className={styles.title}>Jake West</h1>
+        <h1 className={`${styles.title} ${hideClass}`}>Jake West</h1>
         <button className={styles.openMenuBtn} onClick={this.toggleNav}>
           <FontAwesomeIcon icon="angle-left" size="2x" />
           <FontAwesomeIcon
@@ -44,4 +92,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);
