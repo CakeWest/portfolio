@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { withRouter } from "react-router-dom";
+import { withRouter, NavLink } from "react-router-dom";
 import throttle from "common/throttle";
 
 import styles from "./header.scss";
@@ -61,8 +61,8 @@ class Header extends Component {
 
   // update hideName based on vertical scroll
   updateNameVisibility() {
-    console.log("header.updateVis");
-    console.log(window.scrollY);
+    // console.log("header.updateVis");
+    // console.log(window.scrollY);
 
     if (window.scrollY < 230) {
       this.setState({ hideName: true });
@@ -76,7 +76,18 @@ class Header extends Component {
 
     return (
       <header>
-        <h1 className={`${styles.title} ${hideClass}`}>Jake West</h1>
+        <NavLink
+          to="/"
+          activeStyle={{
+            color: "white"
+          }}
+          onClick={function() {
+            window.scrollTo(0, 0);
+          }}
+          activeClassName=""
+        >
+          <h1 className={`${styles.name} ${hideClass}`}>Jake West</h1>
+        </NavLink>
         <button className={styles.openMenuBtn} onClick={this.toggleNav}>
           <FontAwesomeIcon icon="angle-left" size="2x" />
           <FontAwesomeIcon
