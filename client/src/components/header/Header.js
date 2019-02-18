@@ -11,7 +11,6 @@ class Header extends Component {
   constructor(props) {
     super(props);
 
-    // bind this
     this.updateNameVisibility = this.updateNameVisibility.bind(this);
     this.toggleNav = this.toggleNav.bind(this);
 
@@ -49,7 +48,6 @@ class Header extends Component {
     });
   }
 
-  // toggle the mobile navbar
   toggleNav() {
     // make redundant past 768px
     if (window.innerWidth > 768) return;
@@ -61,9 +59,6 @@ class Header extends Component {
 
   // update hideName based on vertical scroll
   updateNameVisibility() {
-    // console.log("header.updateVis");
-    // console.log(window.scrollY);
-
     if (window.scrollY < 230) {
       this.setState({ hideName: true });
     } else {
@@ -85,8 +80,9 @@ class Header extends Component {
             window.scrollTo(0, 0);
           }}
           activeClassName=""
+          className={`${styles.navLink} ${hideClass}`}
         >
-          <h1 className={`${styles.name} ${hideClass}`}>Jake West</h1>
+          <h1 className={styles.name}>Jake West</h1>
         </NavLink>
         <button className={styles.openMenuBtn} onClick={this.toggleNav}>
           <FontAwesomeIcon icon="angle-left" size="2x" />

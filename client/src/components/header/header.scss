@@ -20,7 +20,10 @@ header {
   display: inline-block;
   padding-left: 16px;
   margin: 0;
-  transition: opacity 0.5s;
+}
+
+.navLink {
+  transition: opacity 0.4s;
 }
 
 .openMenuBtn {
@@ -29,6 +32,7 @@ header {
 
 .hide {
   opacity: 0;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 768px) {
