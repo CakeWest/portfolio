@@ -4,8 +4,8 @@ import { BrowserRouter, Route } from "react-router-dom";
 import "normalize.css";
 import styles from "./app.scss";
 
-import Header from "header/Header.js";
-import Footer from "footer/Footer.js";
+import Header from "header/Header";
+import Footer from "footer/Footer";
 import Home from "home/Home";
 // import Portfolio from "portfolio/Portfolio";
 // import About from "about/About";
@@ -14,9 +14,20 @@ import Home from "home/Home";
 // Icons
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faAngleLeft, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleLeft,
+  faEnvelope,
+  faChevronDown
+} from "@fortawesome/free-solid-svg-icons";
 import { faWindowMinimize } from "@fortawesome/fontawesome-free-regular";
-library.add(faLinkedin, faGithub, faAngleLeft, faWindowMinimize, faEnvelope);
+library.add(
+  faLinkedin,
+  faGithub,
+  faAngleLeft,
+  faWindowMinimize,
+  faEnvelope,
+  faChevronDown
+);
 
 class App extends Component {
   render() {
