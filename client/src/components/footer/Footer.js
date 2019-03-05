@@ -34,12 +34,6 @@ class Footer extends React.Component {
 
       return (
         <li key={title}>
-          {/* <ProfileLink
-            url={profile.url}
-            title={profile.title}
-            icon={profile.icon}
-            color="white"
-          /> */}
           <a href={url} title={title} className="">
             <FontAwesomeIcon icon={icon} size="2x" />
           </a>
