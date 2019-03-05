@@ -4,10 +4,10 @@ import { NavLink } from "react-router-dom";
 import styles from "./navbar.scss";
 
 function navbar(props) {
-  let hide = props.hide ? styles.hide : "";
+  let hideClass = props.hide ? styles.hide : "";
 
   return (
-    <nav className={hide} onClick={props.toggleNav}>
+    <nav className={hideClass} onClick={props.toggleNav}>
       <ul>
         <li>
           <NavLink to="/" exact>

@@ -12,7 +12,7 @@ class Header extends Component {
     super(props);
 
     this.updateNameVisibility = this.updateNameVisibility.bind(this);
-    this.toggleNav = this.toggleNav.bind(this);
+    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
 
     let updateNameVisibilitythrottled = throttle(
       this.updateNameVisibility,
@@ -27,7 +27,7 @@ class Header extends Component {
     }
 
     this.state = {
-      hideNav: true,
+      hideMobileMenu: true,
       hideName
     };
 
@@ -48,12 +48,12 @@ class Header extends Component {
     });
   }
 
-  toggleNav() {
+  toggleMobileMenu() {
     // make redundant past 768px
     if (window.innerWidth > 768) return;
 
     this.setState({
-      hideNav: !this.state.hideNav
+      hideMobileMenu: !this.state.hideMobileMenu
     });
   }
 
@@ -67,7 +67,7 @@ class Header extends Component {
   }
 
   render() {
-    let hideClass = this.state.hideName ? styles.hide : "";
+    let hideNameClass = this.state.hideName ? styles.hide : "";
 
     return (
       <header>
@@ -80,11 +80,11 @@ class Header extends Component {
             window.scrollTo(0, 0);
           }}
           activeClassName=""
-          className={`${styles.navLink} ${hideClass}`}
+          className={`${styles.navLink} ${hideNameClass}`}
         >
           <h1 className={styles.name}>Jake West</h1>
         </NavLink>
-        <button className={styles.openMenuBtn} onClick={this.toggleNav}>
+        <button className={styles.openMenuBtn} onClick={this.toggleMobileMenu}>
           <FontAwesomeIcon icon="angle-left" size="2x" />
           <FontAwesomeIcon
             icon={["far", "window-minimize"]}
@@ -93,7 +93,10 @@ class Header extends Component {
             className="bar-icon"
           />
         </button>
-        <Navbar hide={this.state.hideNav} toggleNav={this.toggleNav} />
+        <Navbar
+          hide={this.state.hideMobileMenu}
+          toggleMobileMenu={this.toggleMobileMenu}
+        />
       </header>
     );
   }
