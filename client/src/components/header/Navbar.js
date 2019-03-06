@@ -7,7 +7,7 @@ function navbar(props) {
   let hideClass = props.hide ? styles.hide : "";
 
   return (
-    <nav className={hideClass} onClick={props.toggleNav}>
+    <nav className={hideClass} onClick={props.toggleMobileMenu}>
       <ul>
         <li>
           <NavLink to="/" exact>
