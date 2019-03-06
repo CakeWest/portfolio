@@ -60,8 +60,10 @@ class Header extends Component {
   // update hideName based on vertical scroll
   updateNameVisibility() {
     if (window.scrollY < 230) {
-      this.setState({ hideName: true });
-    } else {
+      if (this.state.hideName === false) {
+        this.setState({ hideName: true });
+      }
+    } else if (this.state.hideName === true){
       this.setState({ hideName: false });
     }
   }
