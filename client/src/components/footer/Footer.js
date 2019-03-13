@@ -42,9 +42,9 @@ class Footer extends React.Component {
     });
 
     return (
-      <section className={styles.footer}>
+      <footer className={styles.footer}>
         <ul className={styles.profileList}>{linkListItems}</ul>
-      </section>
+      </footer>
     );
   }
 }
