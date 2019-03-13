@@ -1,0 +1,49 @@
+@import "../../common/colours";
+
+.home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+  padding: 0 16px;
+  text-align: center;
+  font-family: "varela round";
+  background: $primary_red;
+  color: white;
+}
+
+.name {
+  margin: 8px;
+  font-size: 2.5em;
+  font-family: "courgette";
+}
+
+.title {
+  margin: 8px;
+  color: $gold;
+}
+
+.blurb {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.toPortfolioButton {
+  position: absolute;
+  bottom: 16px;
+  color: $gold;
+  font-size: 1.25em;
+  transition: font-size 0.3s;
+
+  &:hover {
+    font-size: 1.5em;
+  }
+}
+
+.horizontalRule {
+  width: 60%;
+  max-width: 260px;
+  margin: auto;
+  border-top: 1px solid $gold;
+}
