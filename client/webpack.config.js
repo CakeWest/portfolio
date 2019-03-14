@@ -40,7 +40,8 @@ module.exports = {
       common: path.resolve(__dirname, "src/common/"),
       footer: path.resolve(__dirname, "src/components/footer/"),
       header: path.resolve(__dirname, "src/components/header/"),
-      home: path.resolve(__dirname, "src/components/home/")
+      home: path.resolve(__dirname, "src/components/home/"),
+      portfolio: path.resolve(__dirname, "src/components/portfolio/")
     }
   },
   output: {
