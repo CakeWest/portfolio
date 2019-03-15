@@ -84,7 +84,7 @@ class Header extends Component {
           activeClassName=""
           className={`${styles.navLink} ${hideNameClass}`}
         >
-          <h1 className={styles.name}>Jake West</h1>
+          <h1 className={styles.name}>Jake Holmes</h1>
         </NavLink>
         <button className={styles.openMenuBtn} onClick={this.toggleMobileMenu}>
           <FontAwesomeIcon icon="angle-left" size="2x" />

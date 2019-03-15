@@ -10,7 +10,7 @@ export default function Home() {
     <div>
       <div className={styles.home}>
         <div>
-          <h1 className={styles.name}>Jake West</h1>
+          <h1 className={styles.name}>Jake Holmes</h1>
           <div className={styles.horizontalRule} />
           <h2 className={styles.title}>Web Developer</h2>
           <p className={styles.blurb}>
