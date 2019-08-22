@@ -35,9 +35,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpe*g|gif)$/,
-        use: [
-          'file-loader'
-        ]
+        use: ["file-loader"]
       }
     ]
   },
@@ -52,13 +50,14 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist/"),
-    publicPath: "",
+    publicPath: "/",
     filename: "bundle.js"
   },
   devServer: {
     contentBase: path.join(__dirname, "dist/"),
     port: 3000,
-    publicPath: "/"
+    publicPath: "/",
+    historyApiFallback: true
   },
   plugins: [
     new CleanWebpackPlugin("dist", {}),
