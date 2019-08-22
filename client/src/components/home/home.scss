@@ -15,7 +15,7 @@
 
 .name {
   margin: 8px;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   font-family: "courgette";
 }
 
@@ -33,11 +33,11 @@
   position: absolute;
   bottom: 16px;
   color: $gold;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   transition: font-size 0.3s;
 
   &:hover {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 }
 
@@ -46,4 +46,10 @@
   max-width: 260px;
   margin: auto;
   border-top: 1px solid $gold;
+}
+
+@media only screen and (min-width: 600px) {
+  .blurb {
+    font-size: 1.25rem;
+  }
 }
