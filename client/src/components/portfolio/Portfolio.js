@@ -14,7 +14,7 @@ function Portfolio() {
         builtWith=""
         githubURL=""
         learnMoreURL=""
-        imageURLs=""
+        images={[]}
       />
       <PortfolioCard
         title=""
@@ -22,7 +22,7 @@ function Portfolio() {
         builtWith=""
         githubURL=""
         learnMoreURL=""
-        imageURLs=""
+        images={[]}
       />
       <PortfolioCard
         title=""
@@ -30,7 +30,7 @@ function Portfolio() {
         builtWith=""
         githubURL=""
         learnMoreURL=""
-        imageURLs=""
+        images={[]}
       />
       <PortfolioCard
         title=""
@@ -38,7 +38,7 @@ function Portfolio() {
         builtWith=""
         githubURL=""
         learnMoreURL=""
-        imageURLs=""
+        images={[]}
       />
     </div>
   );
