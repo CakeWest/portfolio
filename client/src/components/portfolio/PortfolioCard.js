@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Carousel from "./Carousel";
+// import Carousel from "./Carousel";
 
 import styles from "./portfolioCard.scss";
 
@@ -14,7 +14,7 @@ function PortfolioCard({
 }) {
   return (
     <div className={styles.card}>
-      <Carousel images={images}/>
+      {/* <Carousel images={images}/> */}
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{description}</p>
       <div className={styles.builtWith}>{builtWith}</div>
