@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server"
+    "start": "node server",
+    "heroku-prebuild": "cd client && npm install --dev",
+    "build": "npm run build --prefix client"
   },
   "repository": {
     "type": "git",
