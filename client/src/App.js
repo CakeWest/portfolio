@@ -7,11 +7,9 @@ import styles from "./app.scss";
 import Header from "header/Header";
 import Footer from "footer/Footer";
 import Home from "home/Home";
-// import Portfolio from "portfolio/Portfolio";
-// import About from "about/About";
-// import Contact from "contact/Contact";
+import Stack from "stack/Stack";
+import Contact from "contact/Contact";
 
-// Icons
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -38,10 +36,9 @@ class App extends Component {
         <div className={styles.app}>
           <Header />
           <Route path="/" exact component={Home} />
-          {/* <Route path="/portfolio" component={Portfolio} /> */}
-          {/* <Route path="/about" component={About} /> */}
-          {/* <Route path="/contact" component={Contact} /> */}
-          <Footer />
+          <Route path="/stack" exact component={Stack} />
+          <Route path="/contact" component={Contact} />
+          <Route path={["/", "/stack"]} exact component={Footer} />
         </div>
       </BrowserRouter>
     );
