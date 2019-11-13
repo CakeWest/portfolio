@@ -10,13 +10,10 @@ function navbar(props) {
     <nav className={hideClass} onClick={props.toggleMobileMenu}>
       <ul>
         <li>
-          <NavLink to="/" exact>Home</NavLink>
+          <NavLink to="/" exact>Portfolio</NavLink>
         </li>
         <li>
-          <NavLink to="/portfolio">Portfolio</NavLink>
-        </li>
-        <li>
-          <NavLink to="/languages-tech">Languages/Tech</NavLink>
+          <NavLink to="/stack">Stack</NavLink>
         </li>
         <li>
           <NavLink to="/contact">Contact</NavLink>
